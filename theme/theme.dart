@@ -17,5 +17,13 @@ class DoDidDoneTheme {
       onSurface: Colors.white,
     ),
     useMaterial3: true,
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: Colors.transparent, // Transparent background
+//      elevation: 0, // Remove shadow
+      selectedItemColor: Color(0xFF9f7bf6), // Primary color for selected items
+      unselectedItemColor: Colors.grey, // Grey for unselected items
+      showUnselectedLabels: true, // Show labels for unselected items
+      type: BottomNavigationBarType.fixed, // Fixed for consistent size
+    ),
   );
 }
