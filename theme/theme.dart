@@ -11,8 +11,8 @@ class DoDidDoneTheme {
       onSecondary: Colors.white,
       error: Colors.red,
       onError: Colors.white,
-      background: const Color(0xFF9f7bf6), // Background color
-      onBackground: Colors.white,
+      // background: const Color(0xFF9f7bf6), // Background color
+      // onBackground: Colors.white,
       surface: const Color(0xFF4ceb8b), // Surface color
       onSurface: Colors.white,
     ),
@@ -24,6 +24,13 @@ class DoDidDoneTheme {
       unselectedItemColor: Colors.grey, // Grey for unselected items
       showUnselectedLabels: true, // Show labels for unselected items
       type: BottomNavigationBarType.fixed, // Fixed for consistent size
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(
+          const Color(0xFF4ceb8b), // Цвет фона кнопок
+        ),
+      )
     ),
   );
 }
