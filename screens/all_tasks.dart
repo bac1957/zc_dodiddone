@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/task_item.dart';
+
 class TaskPage extends StatefulWidget {
   const TaskPage({super.key});
 
@@ -33,17 +35,10 @@ class _TaskPageState extends State<TaskPage> {
         itemCount: _tasks.length,
         itemBuilder: (context, index) {
           final task = _tasks[index];
-          return ListTile(
-            title: Text(task['title']),
-            subtitle: Text(task['description']),
-            trailing: Checkbox(
-              value: task['completed'],
-              onChanged: (value) {
-                setState(() {
-                  task['completed'] = value!;
-                });
-              },
-            ),
+          return TaskItem(
+            title: task['title'],
+            description: 'Описание задачи',
+            deadline: DateTime.now()
           );
         },
     );
