@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'main_page.dart';
 
-// import '../theme/theme.dart';
-
 class LoginPage extends StatefulWidget {
-  // const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -34,14 +31,55 @@ class _LoginPageState extends State<LoginPage> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
             children: [
-              Text(
-                isLogin ? 'Вход' : 'Регистрация',
-                style: const TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              // Row for logo and text
+              Padding(
+                padding: const EdgeInsets.only(top: 40.0), // Add top padding
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center, // Center horizontally
+                  children: [
+                    // Image.asset for the logo
+                    Image.asset(
+                      'assets/log.png',
+                      width: 64,
+                      height: 64,
+                    ),
+                    const SizedBox(width: 16), // Space between logo and text
+                    // Text for "Zerocoder"
+                    const Text(
+                      'ZEROCODER',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 120),
+              // RichText for the app name
+              RichText(
+                text: TextSpan(
+                  style: const TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Do-',
+                      style: TextStyle(color: primaryColor),
+                    ),
+                    const TextSpan(
+                      text: 'Did-',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    TextSpan(
+                      text: 'Done',
+                      style: TextStyle(color: secondaryColor),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 40),
@@ -90,13 +128,13 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const MainPage()));  
+                          builder: (context) => const MainPage()));
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: !isLogin
                       ? primaryColor
                       : secondaryColor,
-                  foregroundColor:  Colors.white,
+                  foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                   textStyle: const TextStyle(
                     fontSize: 18,

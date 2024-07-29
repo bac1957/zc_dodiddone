@@ -1,8 +1,8 @@
 #!/bin/bash
 mkdir assets
-mkdir pages
-mkdir screens
-mkdir widgets
-mkdir theme
-mkdir app
-mv lib/main.dart app
+mkdir lib/pages
+mkdir lib/screens
+mkdir lib/widgets
+mkdir lib/theme
+mkdir lib/app
+mv lib/main.dart lib/app

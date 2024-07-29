@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DoDidDone',
       theme: DoDidDoneTheme.lightTheme,
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }
