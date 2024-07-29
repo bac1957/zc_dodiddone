@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "zc_dodiddone" "\0"
+            VALUE "FileDescription", "zerocoderdodiddone" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "zc_dodiddone" "\0"
+            VALUE "InternalName", "zerocoderdodiddone" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "zc_dodiddone.exe" "\0"
-            VALUE "ProductName", "zc_dodiddone" "\0"
+            VALUE "OriginalFilename", "zerocoderdodiddone.exe" "\0"
+            VALUE "ProductName", "zerocoderdodiddone" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

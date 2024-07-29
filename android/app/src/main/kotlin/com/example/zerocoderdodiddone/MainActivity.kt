@@ -1,4 +1,4 @@
-package com.example.zc_dodiddone
+package com.example.zerocoderdodiddone
 
 import io.flutter.embedding.android.FlutterActivity
 
